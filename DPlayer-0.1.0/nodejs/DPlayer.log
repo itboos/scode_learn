@@ -1,0 +1,167 @@
+[2018-04-21 17:28:29.537] [INFO] DPlayer - POST form ::1, data: {"player":"004","author":"zack","time":4.8,"text":"这是管理员发的弹幕","color":"#f00","type":"right"}
+[2018-04-21 17:28:29.551] [ERROR] console - (node:3692) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[2018-04-21 17:29:31.187] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:29:31.188] [INFO] console - 004
+[2018-04-21 17:29:31.200] [INFO] console - data: [ { _id: 5adb003f4550220d76039920,
+    player: '001',
+    author: 'DIYgod',
+    time: 2.8,
+    text: '此生无悔入',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb00714550220d76039921,
+    player: '002',
+    author: 'xueqi',
+    time: 3.8,
+    text: '此生无悔入02',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb03554550220d76039922,
+    player: '003',
+    author: 'zack',
+    time: 4.8,
+    text: '这是管理员发的弹幕',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb043df9a0b30e6c733ec4,
+    player: '004',
+    author: 'zack',
+    time: 4.8,
+    text: '这是管理员发的弹幕',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:30:24.174] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:30:24.175] [INFO] console - 004
+[2018-04-21 17:30:24.183] [INFO] console - data: [] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:30:25.423] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:30:25.424] [INFO] console - 004
+[2018-04-21 17:30:25.433] [INFO] console - data: [] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:30:46.339] [INFO] DPlayer - POST form ::1, data: {"player":"001","author":"zack-01","time":1.8,"text":"这是管理员发的弹幕01","color":"#f00","type":"right"}
+[2018-04-21 17:30:50.110] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:30:50.111] [INFO] console - 001
+[2018-04-21 17:30:50.117] [INFO] console - data: [ { _id: 5adb04c6f9a0b30e6c733ec5,
+    player: '001',
+    author: 'zack-01',
+    time: 1.8,
+    text: '这是管理员发的弹幕01',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:35:45.460] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:35:45.461] [INFO] console - 003
+[2018-04-21 17:35:45.466] [INFO] console - data: [ { _id: 5adb04c6f9a0b30e6c733ec5,
+    player: '001',
+    author: 'zack-01',
+    time: 1.8,
+    text: '这是管理员发的弹幕01',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:35:49.729] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:35:49.731] [INFO] console - 001
+[2018-04-21 17:35:49.739] [INFO] console - data: [ { _id: 5adb04c6f9a0b30e6c733ec5,
+    player: '001',
+    author: 'zack-01',
+    time: 1.8,
+    text: '这是管理员发的弹幕01',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:36:01.553] [INFO] DPlayer - POST form ::1, data: {"player":"002","author":"zack-02","time":2.8,"text":"这是管理员发的弹幕02","color":"#f00","type":"right"}
+[2018-04-21 17:36:08.938] [INFO] DPlayer - POST form ::1, data: {"player":"003","author":"zack-03","time":3.8,"text":"这是管理员发的弹幕03","color":"#f00","type":"right"}
+[2018-04-21 17:36:13.296] [INFO] DPlayer - GET form IP: ::1
+[2018-04-21 17:36:13.298] [INFO] console - 003
+[2018-04-21 17:36:13.302] [INFO] console - data: [ { _id: 5adb04c6f9a0b30e6c733ec5,
+    player: '001',
+    author: 'zack-01',
+    time: 1.8,
+    text: '这是管理员发的弹幕01',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb0601f9a0b30e6c733ec6,
+    player: '002',
+    author: 'zack-02',
+    time: 2.8,
+    text: '这是管理员发的弹幕02',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb0608f9a0b30e6c733ec7,
+    player: '003',
+    author: 'zack-03',
+    time: 3.8,
+    text: '这是管理员发的弹幕03',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
+[2018-04-21 17:36:25.589] [INFO] DPlayer - GET form IP: ::ffff:192.168.1.100
+[2018-04-21 17:36:25.590] [INFO] console - 003
+[2018-04-21 17:36:25.595] [INFO] console - data: [ { _id: 5adb04c6f9a0b30e6c733ec5,
+    player: '001',
+    author: 'zack-01',
+    time: 1.8,
+    text: '这是管理员发的弹幕01',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb0601f9a0b30e6c733ec6,
+    player: '002',
+    author: 'zack-02',
+    time: 2.8,
+    text: '这是管理员发的弹幕02',
+    color: '#f00',
+    type: 'right',
+    __v: 0 },
+  { _id: 5adb0608f9a0b30e6c733ec7,
+    player: '003',
+    author: 'zack-03',
+    time: 3.8,
+    text: '这是管理员发的弹幕03',
+    color: '#f00',
+    type: 'right',
+    __v: 0 } ] function model(doc, fields, skipId) {
+      if (!(this instanceof model)) {
+        return new model(doc, fields, skipId);
+      }
+      Model.call(this, doc, fields, skipId);
+    }
