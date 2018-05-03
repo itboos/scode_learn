@@ -54,7 +54,8 @@
     <hr>
     <div class="dplayer"></div>
 </div>
-<script src="../dist/DPlayer.min.js"></script>
+<!-- <script src="../dist/DPlayer.min.js"></script> -->
+<script src="../src/DPlayer.js?4"></script>
 <script>
     var dp = new DPlayer({
         element: document.getElementsByClassName('dplayer')[0],
@@ -64,9 +65,10 @@
         video: {
             url: 'https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4',
             // https://www.skypixel.com/videos/fa04035a-4054-4f5b-8d92-ac28485814d1
-            url: '../../media/mv02.mp4',
+            url: '../../../media/mv02.mp4',
             pic: ''
         },
+        danmaku: {},
         // danmaku: {
         //     id: '9E2E3368B56CDBB4',
         //     api: 'https://dplayer.daoapp.io/',

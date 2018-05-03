@@ -379,7 +379,7 @@
                         this.updateBar('played', this.audio.currentTime / this.audio.duration, 'width');
                         this.ptime.innerHTML = this.secondToTime(this.audio.currentTime);
                         this.trigger('playing');
-    
+                        console.log('this.danIndex:', this.danIndex);
                         const item = this.dan[this.danIndex];
                         // 更新一条弹幕
                         if (item && this.audio.currentTime >= parseFloat(item.time)) {
@@ -593,7 +593,7 @@
             const settingBox = this.element.getElementsByClassName('dplayer-setting-box')[0];
             const mask = this.element.getElementsByClassName('dplayer-mask')[0];
             settingBox.innerHTML = settingHTML.original;
-    
+            
             const closeSetting = () => {
                 if (settingBox.classList.contains('dplayer-setting-box-open')) {
                     settingBox.classList.remove('dplayer-setting-box-open');
@@ -605,18 +605,19 @@
                     }, 300);
                 }
             };
+            // 关闭设置界面
             const openSetting = () => {
                 settingBox.classList.add('dplayer-setting-box-open');
                 mask.classList.add('dplayer-mask-show');
             };
-    
+            // 打开了设置界面时，点击遮罩层关闭设置界面
             mask.addEventListener('click', () => {
                 closeSetting();
             });
             settingIcon.addEventListener('click', () => {
                 openSetting();
             });
-    
+            // 绑定设计界面元素的点击事件
             const settingEvent = () => {
                 // loop control
                 const loopEle = this.element.getElementsByClassName('dplayer-setting-loop')[0];
@@ -830,25 +831,26 @@
 
                 // adjust
                 item.style.color = color;
+                // 这里可以优化， 改变样式时可以一次性加多个
                 switch (type) {
                     case 'right':
                         item.style.top = itemHeight * getTunnel(item, type) + 'px';
                         item.style.width = (item.offsetWidth + 1) + 'px';
                         item.style.transform = `translateX(-${danWidth}px)`;
                         item.addEventListener('animationend', () => {
-                            danContainer.removeChild(item);
+                        danContainer.removeChild(item);
                         });
                         break;
                     case 'top':
                         item.style.top = itemHeight * getTunnel(item, type) + 'px';
                         item.addEventListener('animationend', () => {
-                            danContainer.removeChild(item);
+                        danContainer.removeChild(item);
                         });
                         break;
                     case 'bottom':
                         item.style.bottom = itemHeight * getTunnel(item, type) + 'px';
                         item.addEventListener('animationend', () => {
-                            danContainer.removeChild(item);
+                        danContainer.removeChild(item);
                         });
                         break;
                     default:
@@ -859,7 +861,7 @@
                 item.classList.add(`dplayer-danmaku-move`);
             };
 
-            // danmaku
+            // danmaku 弹幕发送请求
             if (this.option.danmaku) {
                 this.danIndex = 0;
                 const xhr = new XMLHttpRequest();
@@ -894,6 +896,11 @@
                 }
             }
 
+            // 测试弹幕:
+            this.dan = [
+                { token: '001', player: 1, author: 'xueqi', time: 10, text: '测试弹幕01', color: 'red', type: 'top' },
+                { token: '002', player: 2, author: 'xueqi', time: 10, text: '测试弹幕02', color: 'red', type: 'bottom' },
+            ];
 
             /**
              * comment
@@ -1010,7 +1017,7 @@
     
     
             /**
-             * full screen
+             * full screen  弹幕位移时，可以使用translate3d(x, 0, 0) 代替tanslateX , 3translate3d 可以开启硬件加速
              */
             const resetAnimation = () => {
                 danWidth = danContainer.offsetWidth;
@@ -1029,6 +1036,7 @@
             this.element.addEventListener('webkitfullscreenchange', () => {
                 resetAnimation();
             });
+            // 全屏的开启和关闭
             this.element.getElementsByClassName('dplayer-full-icon')[0].addEventListener('click', () => {
                 if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
                     if (this.element.requestFullscreen) {
@@ -1102,7 +1110,7 @@
             });
 
             /**
-             * right key
+             * right key 鼠标右键按钮, 鼠标菜单
              */
             this.menu = this.element.getElementsByClassName('dplayer-menu')[0];
             this.element.addEventListener('contextmenu', (e) => {
@@ -1163,7 +1171,7 @@
         }
     
         /**
-         * attach event
+         * attach event 触发事件
          */
         on(name, func) {
             if (typeof func === 'function') {
@@ -1171,10 +1179,11 @@
             }
         }
     }
-
+    // node 环境
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = DPlayer;
     }
+    // 浏览器环境
     else {
         window.DPlayer = DPlayer;
     }
